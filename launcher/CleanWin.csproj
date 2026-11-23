@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>WinQuiet</AssemblyName>
+    <RootNamespace>WinQuiet.Launcher</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>WinQuiet.ico</ApplicationIcon>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DebugType>none</DebugType>
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=/src</PathMap>
+    <Version>1.0.0</Version>
+    <Product>WinQuiet</Product>
+    <AssemblyTitle>WinQuiet</AssemblyTitle>
+    <Description>Windows privacy and declutter utility</Description>
+    <Company>WinQuiet</Company>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    <EmbeddedResource Include="..\WinQuiet.ps1" LogicalName="app/WinQuiet.ps1" />
+    <EmbeddedResource Include="..\src\*.ps1" LogicalName="app/src/%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
