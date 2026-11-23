@@ -65,10 +65,11 @@ The required PowerShell version is included with Windows. .NET Framework 4.8 is 
 
 ### Using the executable
 
-1. Download `CleanWin.exe` from the project's release package.
-2. Launch the executable.
-3. Approve the Windows User Account Control request.
-4. Wait for the application interface to initialize.
+1. Download `CleanWin.zip` from the project's release package.
+2. Extract `CleanWin.zip` in desired directory.
+3. Launch the executable.
+4. Approve the Windows User Account Control request.
+5. Wait for the application interface to initialize.
 
 On startup, the application unpacks its internal scripts into:
 
@@ -84,7 +85,7 @@ Alternatively, download or clone the project repository and execute:
 
 
 ```
-Start.bat
+CleanWin.ps1
 ```
 
 When launched this way, application data and configuration backups are stored in a local `data` directory alongside the project files.
@@ -93,7 +94,8 @@ When launched this way, application data and configuration backups are stored in
 
 The main interface is designed around a straightforward workflow:
 
-1. Start CleanWin with administrator privileges.
+
+1. Open CleanWin.exe with administrator privileges.
 2. Select one of the available configuration profiles: **Recommended** or **Minimal**.
 3. Inspect the proposed modifications and change individual selections if necessary.
 4. Press **Apply** to execute the selected operations.
